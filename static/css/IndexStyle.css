@@ -1,0 +1,10 @@
+/* static/css/IndexStyle.css */
+body {
+  overflow: hidden;
+  background-color: #c6d6a1;
+}
+
+#welcome {
+  position: center;
+}
+

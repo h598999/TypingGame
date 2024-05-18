@@ -1,0 +1,52 @@
+# .air.toml
+
+# Config file for air
+# see https://github.com/cosmtrek/air for more examples
+
+[build]
+# CMD is the command to run to build your project.
+# This is mandatory.
+cmd = "go build -o ./tmp/main ."
+
+# BIN is the path where the built binary is saved.
+# This is optional. Default is `./tmp/main`.
+bin = "tmp/main"
+
+# The working directory. Default is ./
+working_dir = "."
+
+# The binary file created by `go build` will be executed directly.
+# If you need to run a script to execute it (e.g., `make run`), you can set it here.
+# This is optional.
+# cmd = "make run"
+
+# The `full_bin` flag determines whether to create a binary with the full package path. Default is false.
+full_bin = false
+
+[watch]
+
+watch_dirs = [
+  ".",
+  "static",
+  "templates"
+]
+
+watch_exts = [
+  ".go",
+  ".html",
+  ".css",
+  ".js"
+]
+
+[dirs]
+# Watch the entire project directory
+include = ["."]
+exclude = ["tmp", "vendor"]
+
+[log]
+# The log level to display. Can be `debug`, `info`, `warn`, or `error`.
+level = "debug"
+
+# The format of the logs. Can be `text` or `json`.
+format = "text"
+
